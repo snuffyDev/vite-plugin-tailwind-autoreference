@@ -1,6 +1,6 @@
 import { resolve } from 'path';
 import { createFilter } from 'vite';
-import type { Plugin, FilterPattern } from 'vite';
+import type { FilterPattern, PluginOption } from 'vite';
 
 const DEFAULT_PATTERNS = [/\.svelte\?.*type=style/, /\.vue\?.*type=style/] as const;
 const DEFAULT_EXCLUDE = [
@@ -33,7 +33,7 @@ interface PluginOptions {
  *
  * @param {PluginOptions} options - The plugin options.
  */
-export default function pluginAutoReference(options: PluginOptions): Plugin {
+export default function pluginAutoReference(options: PluginOptions): PluginOption {
 	const { include = [], cssRoot } = options;
 	const includePatterns: FilterPattern = [
 		...DEFAULT_PATTERNS,

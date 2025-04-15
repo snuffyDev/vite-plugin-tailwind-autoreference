@@ -1,4 +1,4 @@
-import type { Plugin, FilterPattern } from 'vite';
+import type { FilterPattern, PluginOption } from 'vite';
 interface PluginOptions {
     /**
      * A minimatch pattern, or an array of patterns, which specifies the file extensions that the plugin should process.
@@ -24,5 +24,5 @@ interface PluginOptions {
  *
  * @param {PluginOptions} options - The plugin options.
  */
-export default function pluginAutoReference(options: PluginOptions): Plugin;
+export default function pluginAutoReference(options: PluginOptions): PluginOption;
 export {};
