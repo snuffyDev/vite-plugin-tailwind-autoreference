@@ -1,5 +1,7 @@
 # vite-plugin-tailwind-autoreference
 
+[Find me on npm!](https://www.npmjs.com/package/vite-plugin-tailwind-autoreference)
+
 A Vite plugin which will *automatically* add `@reference` directives to your Single File Components (SFCs) `<style>` blocks.
 
 This plugin is designed to work with [Tailwind CSS v4](https://tailwindcss.com/), and is setup to target Svelte and Vue files out of the box.
