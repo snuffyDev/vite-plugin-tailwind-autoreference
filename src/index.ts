@@ -53,10 +53,19 @@ export default function pluginAutoReference(options: PluginOptions): PluginOptio
 			filter = createFilter(includePatterns, DEFAULT_EXCLUDE, { resolve: configRoot });
 		},
 		async transform(code, id) {
-			if (!filter(id)) return code;
-			if (!code.includes('@apply')) return code;
+			if (!filter(id)) return {
+				code,
+				map: null
+			}
+			if (!code.includes('@apply')) return {
+				code,
+				map: null
+			}
 
-			return `@reference "${mainCssFile}";\n${code}`;
+			return {
+				code: `@reference "${mainCssFile}";\n${code}`,
+				map: null
+			}
 		}
 	};
 }

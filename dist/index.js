@@ -28,10 +28,19 @@ export default function pluginAutoReference(options) {
         },
         async transform(code, id) {
             if (!filter(id))
-                return code;
+                return {
+                    code,
+                    map: null
+                };
             if (!code.includes('@apply'))
-                return code;
-            return `@reference "${mainCssFile}";\n${code}`;
+                return {
+                    code,
+                    map: null
+                };
+            return {
+                code: `@reference "${mainCssFile}";\n${code}`,
+                map: null
+            };
         }
     };
 }
