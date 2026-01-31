@@ -43,6 +43,6 @@
     "./package.json": "./package.json"
   },
   "peerDependencies": {
-    "vite": "^6.0.0"
+    "vite": "^7.0.0"
   }
 }
