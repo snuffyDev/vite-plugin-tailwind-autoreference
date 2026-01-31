@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-tailwind-autoreference",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Automatically `@reference` your Tailwind CSS file in Svelte, Vue & other SFC files.",
   "author": "snuffyDev",
   "license": "MIT",
